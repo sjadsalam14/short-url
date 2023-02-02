@@ -1,11 +1,24 @@
 <?php
-$botToken = "344991503:AAF3N1GRHjD_Sya02Pcm0czyYNnhtwSrOvY";
+$botToken = "6059625770:AAFqJ4bWeZZ1ZfHoNijNv65FchsfR-h4DOo";
 $website = "https://api.telegram.org/bot".$botToken;
 $update = json_decode(file_get_contents('php://input'));
 $chat_id = $update->message->chat->id;
 $text = $update->message->text;
 $from = $update->message->from->id;
-$evo = "By :-  @dev_evo"
+$evo = "By :-  @X_77_O"
+	
+	$inlinebutton = [
+    'inline_keyboard' => [
+        [
+            ['text' => "\xF0\x9F\x99\x8B Support Group", 'url' => 'https://t.me/mosLord777'],
+            ['text' => "\xF0\x9F\x94\x94 Update Channel", 'url' => 'https://t.me/mosLord777']
+        ],
+        [
+            ['text' => '➕ جروب المناقشات', 'url' => 'https://t.me/mosLord666']
+        ],
+    ]
+];
+	
 
   if(preg_match('/^([Hh]ttp|[Hh]ttps)(.*)/',$text)){
     $short = file_get_contents('http://yeo.ir/api.php?url='.$text);
